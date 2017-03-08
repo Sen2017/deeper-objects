@@ -38,6 +38,25 @@ var preview = {
 * 			string
 * Return 	isEnabled (string)
 */
+function returnEnable(data){
+	//console.log("\n>>from input(full)\n");
+	//console.log(data);
+	
+	var isEnabled = " ";
+	
+	for(var key in data){
+		if (key === "enabled"){
+			//console.log("\n attempt to access key 'enabled'\n");
+			//console.log(key + ":");
+			//console.log(data[key]);
+			isEnabled += data[key];
+		}
+	}
+	console.log(typeof isEnabled);
+	console.log(isEnabled);			//return not work :(
+}
+
+returnEnable(preview);
 
 /*
 * Function that changes the value from the key "enabled" to true, and returns 
