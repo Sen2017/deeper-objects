@@ -53,10 +53,10 @@ function returnEnable(data){
 		}
 	}
 	console.log(typeof isEnabled);
-	console.log(isEnabled);			//return not work :(
+	console.log(isEnabled);			//return not work 
 }
 
-returnEnable(preview);
+//returnEnable(preview);
 
 /*
 * Function that changes the value from the key "enabled" to true, and returns 
@@ -64,14 +64,35 @@ returnEnable(preview);
 *
 * Return 	value from key enabled (boolean)
 */
+function returnEnableTrue(data){
+	//console.log(data.enabled);
+	//data.enabled = true;
+	//for(var key in data){
+		//console.log(data[key]);
+	//	if (key === "enabled"){
+	//		data[key] = true;
+	//	}
+	//}
+	//return data.enabled;
+}
 
+//console.log(returnEnableTrue(preview));
 /*
 * Function that retrieves the urls only from the key "resolutions" 
 * , stores the values in an array called "urls", and returns the created array
 * 
 * Return 	urls (array)
 */
+function resolutionUrl(data){
+	var urls = [];
+	//console.log(data);
+	console.log(data.images[0].resolutions[0]);
+	for (var url = 0; i < data.images[0].resolutions; url++){
+		console.log(url);
+	}
+}
 
+console.log(resolutionUrl(preview));
 /*
 * Function that retrieves the first nested key and value pairing
 * from the values of "images", stores them in a new object called 
